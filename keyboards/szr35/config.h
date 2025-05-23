@@ -1,5 +1,4 @@
 
-
 #pragma once
 
 #undef STM32_HSECLK

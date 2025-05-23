@@ -1,4 +1,4 @@
-#include "m36.h"
+#include "szr35.h"
 
 #ifdef RGB_MATRIX_ENABLE
 
