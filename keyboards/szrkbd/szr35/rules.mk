@@ -1,0 +1,2 @@
+SERIAL_DRIVER = usart
+UARTENABLE = yes
