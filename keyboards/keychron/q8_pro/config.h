@@ -1,0 +1,96 @@
+/* Copyright 2023 @ Keychron (https://www.keychron.com)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#pragma once
+
+#include "eeconfig_kb.h"
+
+/* HC595 Driver configuretion */
+#define HC595_STCP B0
+#define HC595_SHCP A1
+#define HC595_DS A7
+#define HC595_OFFSET_INDEX 1
+#define HC595_END_INDEX 14
+
+/* turn off effects when suspended */
+#define RGB_MATRIX_SLEEP
+
+/* LSI Mode */
+#define LSI_MODE_ENABLE
+
+/* Increase I2C speed to 1000 KHz */
+#define I2C1_TIMINGR_PRESC 0U
+#define I2C1_TIMINGR_SCLDEL 3U
+#define I2C1_TIMINGR_SDADEL 0U
+#define I2C1_TIMINGR_SCLH 15U
+#define I2C1_TIMINGR_SCLL 51U
+
+#ifdef KC_BLUETOOTH_ENABLE
+/* Hardware configuration */
+#    define BT_MODE_SELECT_PIN C15
+
+#    define CKBT51_RESET_PIN A9
+
+#    define MCU_TO_WIRELESS_INT_PIN A5
+#    define WIRELESS_TO_MCU_INT_PIN A6
+
+#    define USB_POWER_SENSE_PIN B1
+#    define USB_POWER_CONNECTED_LEVEL 0
+
+#    define HOST_DEVICES_COUNT 3
+
+#    if defined(RGB_MATRIX_ENABLE)
+
+#        define LED_DRIVER_SHUTDOWN_PIN C14
+
+#        define BT_INDCATION_LED_MATRIX_LIST \
+            { 15, 16, 17 }
+
+#        define BAT_LEVEL_LED_LIST \
+            { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+
+/* Backlit disable timeout when keyboard is disconnected(unit: second) */
+#        define DISCONNECTED_BACKLIGHT_DISABLE_TIMEOUT 40
+
+/* Backlit disable timeout when keyboard is connected(unit: second) */
+#        define CONNECTED_BACKLIGHT_DISABLE_TIMEOUT 600
+#    endif
+
+/* Keep USB connection in blueooth mode */
+#    define KEEP_USB_CONNECTION_IN_BLUETOOTH_MODE
+
+/* Enable bluetooth NKRO */
+#    define BLUETOOTH_NKRO_ENABLE
+
+/* Enable bluetooth NKRO */
+#    define WIRELESS_NKRO_ENABLE
+
+/* Raw hid command for factory test and bluetooth DFU */
+#    define RAW_HID_CMD 0xAA ... 0xAB
+#else
+/* Raw hid command for factory test */
+#    define RAW_HID_CMD 0xAB
+
+#endif
+
+/* Encoder Configuration */
+#ifdef ENCODER_ENABLE
+#    define ENCODER_DEFAULT_POS 0x3
+#endif
+
+
+/* Factory test keys */
+#define FN_KEY1 MO(4)
