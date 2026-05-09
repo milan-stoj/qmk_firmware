@@ -14,7 +14,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "q8_pro.h"
 #include "keychron.h"
 
 #ifdef DIP_SWITCH_ENABLE

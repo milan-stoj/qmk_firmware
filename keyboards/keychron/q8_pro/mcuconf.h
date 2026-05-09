@@ -21,8 +21,8 @@
 #undef STM32_LSI_ENABLED
 #define STM32_LSI_ENABLED TRUE
 
-/* Set HCLK to 48 MHz as tradeoff of USB lowest clockand and
- * lower power comsumption for bluetooth. Will use dynamic
+/* Set HCLK to 48 MHz as a tradeoff of USB clock and
+ * lower power consumption for bluetooth. Will use dynamic
  * clock when STM32L4 is supported in ChibiOS */
 #undef STM32_PLLM_VALUE
 #define STM32_PLLM_VALUE 2

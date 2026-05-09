@@ -18,7 +18,7 @@
 
 #include "eeconfig_kb.h"
 
-/* HC595 Driver configuretion */
+/* HC595 driver configuration */
 #define HC595_STCP B0
 #define HC595_SHCP A1
 #define HC595_DS A7
@@ -69,13 +69,13 @@
 #        define CONNECTED_BACKLIGHT_DISABLE_TIMEOUT 600
 #    endif
 
-/* Keep USB connection in blueooth mode */
+/* Keep USB connection in bluetooth mode */
 #    define KEEP_USB_CONNECTION_IN_BLUETOOTH_MODE
 
 /* Enable bluetooth NKRO */
 #    define BLUETOOTH_NKRO_ENABLE
 
-/* Enable bluetooth NKRO */
+/* Enable wireless NKRO */
 #    define WIRELESS_NKRO_ENABLE
 
 /* Raw hid command for factory test and bluetooth DFU */
@@ -91,6 +91,5 @@
 #    define ENCODER_DEFAULT_POS 0x3
 #endif
 
-
 /* Factory test keys */
-#define FN_KEY1 MO(4)
+#define FN_KEY_1 MO(4)
