@@ -121,4 +121,7 @@ uint8_t default_region[RGB_MATRIX_LED_COUNT] = {
     0,    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0,       0, 0, 0, 0,       0, 0, 0
 };
-#endif
+#undef DC_RED
+#undef DC_BLU
+#undef DC_YLW
+#endif /* RGB_MATRIX_ENABLE */

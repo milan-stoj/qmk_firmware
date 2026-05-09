@@ -72,9 +72,6 @@
 /* Keep USB connection in bluetooth mode */
 #    define KEEP_USB_CONNECTION_IN_BLUETOOTH_MODE
 
-/* Enable bluetooth NKRO */
-#    define BLUETOOTH_NKRO_ENABLE
-
 /* Enable wireless NKRO */
 #    define WIRELESS_NKRO_ENABLE
 
@@ -92,4 +89,4 @@
 #endif
 
 /* Factory test keys */
-#define FN_KEY_1 MO(4)
+#define FN_KEY_1 MO(4) /* FN2 layer */

@@ -26,19 +26,19 @@ const snled27351_led_t g_snled27351_leds[RGB_MATRIX_LED_COUNT] = {
  *   |  |           |           B location
  *   |  |           |           | */
   {0, CB9_CA2,    CB7_CA2,    CB8_CA2},
-  {0, CB9_CA3,    CB7_CA3,    CB8_CA3},
-  {0, CB9_CA4,    CB7_CA4,    CB8_CA4},
-  {0, CB9_CA5,    CB7_CA5,    CB8_CA5},
-  {0, CB9_CA6,    CB7_CA6,    CB8_CA6},
-  {0, CB9_CA7,    CB7_CA7,    CB8_CA7},
-  {0, CB9_CA8,    CB7_CA8,    CB8_CA8},
-  {0, CB9_CA9,    CB7_CA9,    CB8_CA9},
-  {0, CB9_CA10,   CB7_CA10,   CB8_CA10},
-  {0, CB9_CA11,   CB7_CA11,   CB8_CA11},
-  {0, CB9_CA12,   CB7_CA12,   CB8_CA12},
-  {0, CB9_CA13,   CB7_CA13,   CB8_CA13},
-  {0, CB9_CA14,   CB7_CA14,   CB8_CA14},
-  {0, CB9_CA15,   CB7_CA15,   CB8_CA15},
+    {0, CB9_CA3,    CB7_CA3,    CB8_CA3},
+    {0, CB9_CA4,    CB7_CA4,    CB8_CA4},
+    {0, CB9_CA5,    CB7_CA5,    CB8_CA5},
+    {0, CB9_CA6,    CB7_CA6,    CB8_CA6},
+    {0, CB9_CA7,    CB7_CA7,    CB8_CA7},
+    {0, CB9_CA8,    CB7_CA8,    CB8_CA8},
+    {0, CB9_CA9,    CB7_CA9,    CB8_CA9},
+    {0, CB9_CA10,   CB7_CA10,   CB8_CA10},
+    {0, CB9_CA11,   CB7_CA11,   CB8_CA11},
+    {0, CB9_CA12,   CB7_CA12,   CB8_CA12},
+    {0, CB9_CA13,   CB7_CA13,   CB8_CA13},
+    {0, CB9_CA14,   CB7_CA14,   CB8_CA14},
+    {0, CB9_CA15,   CB7_CA15,   CB8_CA15},
 
     {0, CB6_CA2,    CB4_CA2,    CB5_CA2},
     {0, CB6_CA3,    CB4_CA3,    CB5_CA3},
@@ -120,4 +120,7 @@ uint8_t default_region[RGB_MATRIX_LED_COUNT] = {
     0,    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0,       0, 0, 0, 0,       0, 0, 0
 };
-#endif
+#undef DC_RED
+#undef DC_BLU
+#undef DC_YLW
+#endif /* RGB_MATRIX_ENABLE */

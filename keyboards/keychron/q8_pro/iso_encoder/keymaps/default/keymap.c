@@ -17,15 +17,15 @@
 #include QMK_KEYBOARD_H
 #include "keychron_common.h"
 
-// clang-format off
-enum layers{
-  MAC_BASE,
-  WIN_BASE,
-  MAC_FN1,
-  WIN_FN1,
-  FN2,
+enum layers {
+    MAC_BASE,
+    WIN_BASE,
+    MAC_FN1,
+    WIN_FN1,
+    FN2,
 };
 
+// clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MAC_BASE] = LAYOUT_70_iso(
         KC_ESC,  KC_1,     KC_2,     KC_3,    KC_4,    KC_5,    KC_6,        KC_7,     KC_8,    KC_9,    KC_0,     KC_MINS,  KC_EQL,   KC_BSPC,           KC_MUTE,
@@ -72,3 +72,4 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [FN2]      = {ENCODER_CCW_CW(_______, _______)},
 };
 #endif // ENCODER_MAP_ENABLE
+// clang-format on
